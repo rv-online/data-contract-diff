@@ -1,0 +1,4 @@
+{"schema_id": "orders", "version": 2, "fields_added": 2, "fields_removed": 0}
+{"schema_id": "orders", "version": 3, "fields_added": 1, "fields_removed": 1}
+{"schema_id": "payments", "version": 2, "fields_added": 0, "fields_removed": 0}
+{"schema_id": "sessions", "version": 4, "fields_added": 3, "fields_removed": 2}
