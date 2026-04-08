@@ -1,21 +1,29 @@
 # Data Contract Diff
 
-Python analytics project for schema compatibility checks. It packages a small but reviewable workflow with deterministic scoring, JSON outputs, and unit tests.
+Python utility for comparing producer and consumer data contracts, surfacing compatibility breaks, and summarizing schema drift risk.
 
-## What It Shows
+## Why This Exists
 
-- contract enforcement, backward compatibility, and producer-consumer safety
-- clear ingestion and summarization logic
-- CLI entrypoint and test coverage
+Models the kind of guardrail platform teams use when multiple services depend on evolving event or table schemas.
 
-## Run
+## What This Demonstrates
+
+- schema comparison with backward-compatibility focus
+- drift reporting designed for engineering review
+- lightweight workflow that still reads like real data-governance tooling
+
+## Architecture
+
+1. source and target contracts are parsed into structured fields
+1. compatibility rules classify additive, breaking, and ambiguous changes
+1. summaries are emitted as review-friendly JSON artifacts
+
+## Run It
 
 ```bash
-python -m src.analyzer --input data/contracts.ndjson --output out/report.json
+python -m unittest
 ```
 
-## Test
+## Verification
 
-```bash
-python -m unittest discover -s tests
-```
+Run `python -m unittest` to confirm compatibility rules and diff behavior.
